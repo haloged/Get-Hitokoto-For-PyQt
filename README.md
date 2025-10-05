@@ -1,6 +1,6 @@
 # 一言生成器 For PyQt
 
-[English](https://github.com/haloged/get_hitokoto/blob/main/README_EN.md)
+[English](https://github.com/haloged/Get-Hitokoto-For-PyQt/blob/main/README_EN.md)
 
 > [!CAUTION]
 > 此版本为实验性版本，不保证功能能够正常使用。如需稳定版，请前往[普通仓库](https://github.com/haloged/get_hitokoto)
@@ -11,8 +11,8 @@
 编译版本需要下载Python环境。
 
 **如果您是第一次使用，您需执行4步，如不是第一次使用，只需执行第四步即可。**
-1. 点击[这里](https://www.python.org/ftp/python/3.8.3/python-3.8.3-macosx10.9.pkg)下载并点击安装
-2. 下载完成后，打开[这里](https://github.com/haloged/get_hitokoto/blob/main/gui.py),同时按下`Ctrl+Shift+S`,选择一个位置保存，记住这个位置。
+1. 点击[这里](https://www.python.org/ftp/python/3.8.3/python-3.8.3.exe)下载并点击安装
+2. 下载完成后，打开[这里](https://github.com/haloged/Get-Hitokoto-For-PyQt/blob/main/main.py),同时按下`Ctrl+Shift+S`,选择一个位置保存，记住这个位置。
 3. 点按任务栏中的“搜索”图标 ，在搜索栏中键入“命令提示符”，然后点按“命令提示符”。在终端中输入`pip install openai PyQt5`。
 4. 找到你第三步保存的位置，点击`gui.py`即可运行。爬取的一言文件将保存在`gui.py`同目录的`log.txt`中。
 
@@ -21,7 +21,7 @@
 
 **如果您是第一次使用，您需执行4步，如不是第一次使用，只需执行第四步即可。**
 1. 点击[这里](https://www.python.org/ftp/python/3.8.3/python-3.8.3-macosx10.9.pkg)下载并点击安装
-2. 下载完成后，打开[这里](https://github.com/haloged/get_hitokoto/blob/main/gui.py),同时按下`Command+Shift+S`,选择一个位置保存，记住这个位置。
+2. 下载完成后，打开[这里](https://github.com/haloged/Get-Hitokoto-For-PyQt/blob/main/main.py),同时按下`Command+Shift+S`,选择一个位置保存，记住这个位置。
 3. 点按程序坞中的“启动台”图标 ，在搜索栏中键入“终端”，然后点按“终端”。在终端中输入`pip install openai PyQt5`。
 4. 找到你第三步保存的位置，点击`gui.py`即可运行。爬取的一言文件将保存在`gui.py`同目录的`log.txt`中。
 ## Linux
@@ -59,7 +59,7 @@ ln -s /usr/local/python3/bin/python3 /usr/bin/python3ln -s /usr/local/python3/bi
 ```sh
 python3 --versionpip -V
 ```
-9. 打开[这里](https://github.com/haloged/get_hitokoto/blob/main/gui.py),选择一个位置保存，记住这个位置。
+9. 打开[这里](https://github.com/haloged/Get-Hitokoto-For-PyQt/blob/main/main.py),选择一个位置保存，记住这个位置。
 10. 打开终端，输入以下代码：
 ```sh
 pip install openai PyQt5
