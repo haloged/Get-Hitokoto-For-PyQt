@@ -124,6 +124,10 @@ class MainWindow(QMainWindow):
         jcgx_action.triggered.connect(self.jcgx)
         edit_menu.addAction(jcgx_action)
 
+        xhgxtd_action = QAction('切换正式版通道', self)
+        xhgxtd_action.triggered.connect(self.xhgxtd)
+        edit_menu.addAction(xhgxtd_action)
+
         paste_action = QAction('关于', self)
         paste_action.triggered.connect(self.about)
         edit_menu.addAction(paste_action)
@@ -145,12 +149,19 @@ class MainWindow(QMainWindow):
     def ope_help_doc(self):
         os.system("start https://haloged-studio.feishu.cn/wiki/S554wi9cPiQi6yk1zhAcEEBfnjf")
 
+    def xhgxtd(self):
+        reply1 = QMessageBox.question(self,"提示","切换至正式版通道后需手动下载测试版\n如需切换请按“Yes”",QMessageBox.Yes | QMessageBox.No,QMessageBox.No)
+        if reply1==16384:
+            os.system("start https://github.com/haloged/get_hitokoto/releases")
+        else:
+            pass
+    
     def jcgx(self):
-        vertion=requests.get("https://tinywebdb.appinventor.space/api?user=haloged&secret=463de003&action=get&tag=bbh")
+        vertion=requests.get("https://tinywebdb.appinventor.space/api?user=haloged&secret=463de003&action=get&tag=qt_bbh")
         vertion_jx=json.loads(vertion.text)
         bbh=vertion_jx["bbh"]
         print("当前最新版本："+bbh)
-        if bbh=="1.1.0":
+        if bbh=="0.0.1":
             QMessageBox.information(self,"提示","无更新",QMessageBox.Yes,QMessageBox.Yes)
         else:
             reply = QMessageBox.question(self,"提示","有新版本！\n点击“Yes”转到仓库",QMessageBox.Yes | QMessageBox.No,QMessageBox.No)
@@ -175,7 +186,7 @@ class MainWindow(QMainWindow):
     def ope_github(self):
         os.system("start https://github.com/haloged/get_hitokoto")
     def about(self):
-        QMessageBox.about(self,"关于软件","一言生成器 For PyQt\n作者：haloged\n软件版本：1.3.0\n作者B站：https://space.bilibili.com/518055250\nGithub仓库：https://github.com/haloged/get_hitokoto")
+        QMessageBox.about(self,"关于软件","一言生成器 For PyQt(Bata)\n作者：haloged\n软件版本：0.0.1(Bata)\n渠道：Bata\n作者B站：https://space.bilibili.com/518055250\nGithub仓库：https://github.com/haloged/get_hitokoto")
         
 
     def btnstate(self,btn):
